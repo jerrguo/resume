@@ -1,0 +1,238 @@
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Configuration
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Themes: Awesome-CV
+\documentclass[11pt, a4paper]{awesome-cv}
+
+%%% Override a directory location for fonts(default: 'fonts/')
+\fontdir[fonts/]
+
+%%% Configure a directory location for sections
+\newcommand*{\sectiondir}{resume/}
+
+%%% Override color
+% Awesome Colors: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange
+%                 awesome-nephritis, awesome-concrete, awesome-darknight
+%% Color for highlight
+% Define your custom color if you don't like awesome colors
+\colorlet{awesome}{awesome-darknight}
+%\definecolor{awesome}{HTML}{CA63A8}
+%% Colors for text
+%\definecolor{darktext}{HTML}{414141}
+%\definecolor{text}{HTML}{414141}
+%\definecolor{graytext}{HTML}{414141}
+%\definecolor{lighttext}{HTML}{414141}
+
+%%% Override a separator for social informations in header(default: ' | ')
+%\headersocialsep[\quad\textbar\quad]
+
+%%% testing vertical line
+
+\usepackage[]{mdframed}
+
+
+\newmdenv[
+  linewidth=2.5pt,
+  topline=false,
+  bottomline=false,
+  rightline=false,
+  innertopmargin=-8pt
+  innerbottommargin=-4pt,
+  splittopskip=\topskip,
+  skipbottom=0\topsep,
+  skipabove=0.5\topsep,
+  linecolor={teal},
+]{siderules}
+
+\newmdenv[
+  linewidth=2.5pt,
+  topline=false,
+  bottomline=false,
+  rightline=false,
+  innertopmargin=-8pt
+  innerbottommargin=0pt,
+  splittopskip=\topskip,
+  skipbottom=3.5\topsep,
+  skipabove=0.5\topsep,
+  linecolor={red},
+]{siderules1}
+
+\newmdenv[
+  linewidth=2.5pt,
+  topline=false,
+  bottomline=false,
+  rightline=false,
+  innertopmargin=-8pt
+  innerbottommargin=10pt,
+  splittopskip=\topskip,
+  skipbottom=3.5\topsep,
+  skipabove=0.5\topsep,
+  linecolor={purple},
+]{siderules2}
+
+\newmdenv[
+  linewidth=2.5pt,
+  topline=false,
+  bottomline=false,
+  rightline=false,
+  innertopmargin=-8pt
+  innerbottommargin=0pt,
+  splittopskip=\topskip,
+  skipabove=0.5\topsep,
+  linecolor={blue},
+]{siderules3}
+
+\newmdenv[
+  linewidth=2.5pt,
+  topline=false,
+  bottomline=false,
+  rightline=false,
+  innertopmargin=-8pt
+  innerbottommargin=0pt,
+  splittopskip=\topskip,
+  skipabove=0.5\topsep,
+  linecolor={orange},
+]{siderules4}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     3rd party packages
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Needed to divide into several files
+\usepackage{import}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Personal Data
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%% Essentials
+\name{Jerry Guo}{}
+\mobile{705-309-9695} 
+%%% Social
+\email{jerrguo@gmail.com}
+\github{jerrguo}
+\linkedin{jerry-guo}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Content
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Make a footer for CV with three arguments(<left>, <center>, <right>)
+
+
+\begin{document}
+
+%%% Make a header for CV with personal data
+\makecvheader
+
+%%% Import contents
+
+\input{resume/skills.tex}
+
+
+\begin{siderules1}
+\cvsection{Experience}
+\begin{cventries}
+    \cventry
+    {\textit{\bodyfontlight{Unknown}}}
+    {Amazon}
+    {Software Engineering Intern}
+    {May 2021 - Sep 2021}
+    {
+      \begin{cvitems}
+        \item {Incoming Software Development Engineer at Amazon}
+      \end{cvitems}
+    }
+    \cventry
+    {\textit{\bodyfontlight{Python, Airflow, AWS, Spark, Docker}}}
+    {Zynga}
+    {Software Engineering Intern}
+    {Jan 2020 - April 2020}
+    {
+      \begin{cvitems}
+        \item {Worked on machine learning team, managing high-volume data services and maintaining data store’s high-throughput ingestion pipelines}
+        \item {Designed and built scalable and self-balancing distributed cluster systems, increasing the average job throughput by 15\%}
+        \item {Streamlined a pipeline on Airflow allowing teams to schedule data ingestions up to 3x faster}
+      \end{cvitems}
+    }
+    \cventry
+    {\textit{\bodyfontlight{Python, JavaScript, AWS, React, Django, MongoDB}}}
+    {Rippling}
+    {Software Engineering Intern}
+    {May 2019 - Aug 2019}
+    {
+      \begin{cvitems}
+        \item {Worked on on-boarding team, building user-facing core features on Rippling’s main product}
+        \item {Led and shipped an end-to-end E-Verify web platform to automatically determine US employment eligibility used by over 90\% of Rippling customers}
+        \item {Coordinated directly with stakeholders and customers to update and improve on-boarding system}
+      \end{cvitems}
+    }
+    \cventry
+    {\textit{\bodyfontlight{Python, C++, JavaScript, React, Docker}}}
+    {Element AI}
+    {Software Engineering Intern}
+    {Sep 2018 - Dec 2018}
+    {
+      \begin{cvitems}
+        \item {Worked on OCR team, building internal tools, APIs, and machine learning infrastructure}
+        \item {Designed a Flask API to control a flying drone using sensory inputs from AR goggles}
+        \item {Generated 1M+ synthetic random receipts used for OCR model training}
+      \end{cvitems}
+    }
+  \cventry
+    {\textit{\bodyfontlight{Python, VBA}}}
+    {Bank of Montreal}
+    {Security Analyst Intern}
+    {Jan 2018 - Apr 2018}
+    {
+      \begin{cvitems}
+        \item {Worked with analysts to build tools for parsing benchmarks + metrics used to identify suspicious activity}
+        \item {Built a pipeline to automatically format and standardize raw CSV data}
+      \end{cvitems}
+    }
+  \cventry
+    {\textit{\bodyfontlight{Python, Pandas, JavaScript}}}
+    {Conrad Business Centre}
+    {Software Engineering Intern}
+    {May 2017 - Aug 2017}
+    {
+      \begin{cvitems}
+        \item {Worked on building data infrastructure and pipelines for natural language processing}
+        \item {Mined thousands of email + text conversation data-sets to train customer service chat-bot}
+      \end{cvitems}
+    }
+\end{cventries}
+\end{siderules1}
+
+\begin{siderules2}
+\cvsection{Projects}
+\begin{cventries}
+    \cventry
+        {\textit{\bodyfontlight{Python, OpenCV, TensorFlow, NVIDIA Jetson Nano}}}
+        {Automated Sports Camera System}
+        {}
+        {}
+        {
+          \begin{cvitems}
+            \item {Worked with a team of six, building development infrastructure and computer vision tools}
+            \item {Designed image processing software to find bounding boxes of a sports ball using a KCF filter}
+          \end{cvitems}
+        }
+\end{cventries}
+\end{siderules2}
+\begin{siderules3}
+\begin{cventries}
+    \education
+    {\fontsize{11pt}{1.3em}\bodyfont\upshape\color{text}\selectfont Bachelor of Applied Science, Computer Engineering}
+    {University of Waterloo}
+    {GPA 3.45}
+    {Sep 2016 - Apr 2022}
+    {
+      \begin{cvitems}
+      \end{cvitems}
+    }
+\end{cventries}
+\end{siderules3}
+\end{document}
